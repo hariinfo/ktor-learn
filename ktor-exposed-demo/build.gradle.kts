@@ -61,9 +61,15 @@ tasks {
     }
 }
 
+//Should ideally pass this as environment variables from secret store
+val dbServer: String = System.getenv("DB_SERVER") ?: "localhost"
+val dbName: String = System.getenv("DB_NAME") ?: "dummy"
+val dbUser: String = System.getenv("DB_USER") ?: "dummy"
+val dbPassword: String = System.getenv("DB_PASSWORD") ?: "dummy"
+
 flyway {
-    url = "jdbc:postgresql://localhost:6551/dummy"
+    url = "jdbc:postgresql://$dbServer:6551/$dbName"
     driver = "org.postgresql.Driver"
-    user = "dummy"
-    password = "dummy"
+    user = dbUser
+    password = dbPassword
 }
