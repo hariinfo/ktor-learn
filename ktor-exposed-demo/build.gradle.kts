@@ -7,8 +7,6 @@ val hikari_version: String by project
 val flyway_version: String by project
 val kafka_version: String by project
 
-//https://github.com/kepler-ft/instacommunity-back/blob/4a6c8ced71be5b50268a6365b1f00d026035da1e/build.gradle.kts
-
 plugins {
     application
     kotlin("jvm") version "1.6.10"
