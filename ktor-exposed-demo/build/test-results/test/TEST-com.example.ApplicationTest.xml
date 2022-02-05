@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.ApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-03T23:05:49" hostname="infra04-wg012.eduroam.wireless.umn.edu" time="7.047">
+  <properties/>
+  <testcase name="testSequentialByDefault" classname="com.example.ApplicationTest" time="7.047"/>
+  <system-out><![CDATA[Running core business logic
+execution complete...
+Send message to kafka
+posted metrics to API
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

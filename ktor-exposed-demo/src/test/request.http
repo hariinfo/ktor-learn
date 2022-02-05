@@ -1,0 +1,14 @@
+POST http://localhost:8080/patient
+Content-Type: application/json
+
+{
+    "id" : 10,
+    "firstName": "",
+    "lastName": ""
+}
+
+###
+GET http://localhost:8080/patient/111
+
+###
+DELETE http://localhost:8080/patient/111
