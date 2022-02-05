@@ -39,8 +39,24 @@ services:
     depends_on:
       - kafka
 
+  database:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=dummy
+      - POSTGRES_USER=dummy
+      - POSTGRES_DB=dummy
+    ports:
+      - 6551:5432
+    volumes:
+      - "postgres_data:/var/lib/postgresql/data"
+    depends_on:
+      - kafdrop
 volumes:
   zookeeper_data:
     driver: local
   kafka_data:
+    driver: local
+  postgres_data:
     driver: local
